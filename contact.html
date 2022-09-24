@@ -10,7 +10,7 @@
   <body>
     <header>
       <nav> 
-        <ul>
+          <ul>
             <img src="icons/KING KICTHEN LOGO.png" alt="King_loge" class="logo"/>
             <li><a href="index.html">Home</a></li>
             <li><a href="recipes.html">Recipes</a></li>
@@ -20,12 +20,42 @@
       </nav>
     </header>
     <main>
-      <section class="welcome">
-          <h1>Halla Balla</h1>
-          <div class="Carousel"></div>
-    </section>
-      </main>
-      <footer class="footer-complete">
+    <div class="contact_container">
+      <h1>Contact us</h1>    
+    <h3>Have any questions? We'd love to hear from you!</h3> 
+        <div class="contact_content">
+        <h2 class="send_us_message">Send us a message</h2>
+        <form id="form">
+        <div> 
+
+        <input type="text" id="name" name="name" placeholder="Full name"/>
+        <div class="form-error" id="fullNameError">Please enter your Full name</div>
+        <div>
+  
+        <input type="text" id="email" name="email" placeholder="Email address"/>
+        <div class="form-error" id="emailError">Please enter a valid email address</div>
+    </div>
+
+    </div>
+</div>
+    <div>
+        <input type="text" id="message" name="message" placeholder="Message"/>
+        </label>
+        <div class="form-error" id="messageError">Please write something:)</div>
+    </div>
+        <input type="submit" value="send">
+    </form>
+<div class="row">
+    <div class="column">
+          <img src="images/fresh-italian-salad-antipasto-called-caprese-with-buffalo-mozzarella-sliced-tomatoes-basil-with-olive-oil-ingredients-vegetarian-caprese-salad-italian-food-top-view-rustic-style.jpeg" alt="pasta" style="width:100%">
+        </div>
+    <div class="column">
+        <img src="images/chef-process-making-pizza-dough.jpeg" alt="Pizza dough" style="width:100%">
+        </div>
+    </div>
+</div> 
+</main>
+    <footer class="footer-complete">
     <div class="footer-left">
         <img src="icons/KING KICTHEN LOGO.png" alt="King_loge" class="logo-footer"/>
         <p class="footer-links">
@@ -35,33 +65,7 @@
         <a href="contact.html">Contact</a>
         </p>
     </div>
-<!-- Slider container -->
-<div class="slider">
-  <!-- slide 1 -->
-  <div class="slide">
-    <img src="images/baked-salmon-garnished-with-asparagus-tomatoes-with-herbs.jpeg" alt="" />
-  </div>
 
-  <!-- slide 2 -->
-  <div class="slide">
-    <img src="/images/delicious-ravioli-with-tomato-sauce-dill.jpeg" alt="" />
-  </div>
-
-  <!-- slide 3 -->
-  <div class="slide">
-    <img src="/images/hamburger.jpg" alt="" />
-  </div>
-
-  <!-- slide 4 -->
-  <div class="slide">
-    <img src="/images/japanese-traditional-salad-with-pieces-medium-rare-grilled-ahi-tuna-sesame-with-fresh-vegetable-bowl.jpeg" alt="" />
-  </div>
-
-  <!-- Control buttons -->
-  <button class="btn btn-next"> > </button>
-  <button class="btn btn-prev">
-  </button>
-</div>
     <div class="footer-center">
         <div>
         <i class="fa fa-map-marker"></i>
@@ -91,6 +95,6 @@
         </div>
     </div>
     </footer>
-    <script src="js/carousel.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html> 

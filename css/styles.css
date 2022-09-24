@@ -1,0 +1,396 @@
+/* header and nav */
+html,
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 5;
+  overflow: hidden;
+  background-color: #fffff;
+}
+
+ul img {
+  height: 80px;
+  float: left;
+  padding: 10px;
+}
+li {
+  float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+
+.welcome{
+    background-image: url(../images/pizza-food.jpeg);
+    width: 100%;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* About us */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    box-shadow: 0 7px 10px 0 rgba(0.2, 0.2, 0.2, 0.2);
+    padding-bottom: 40px;
+  }
+.column {
+    float: left;
+    text-align: center;
+    width: 33.3%;
+    margin-bottom: 5px;
+    padding: 0 8px;
+}
+  
+.chefs {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+.container {
+    padding: 16px;
+
+}
+  
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.title {
+    color: grey;
+}
+/* Carousel slider */
+  
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    
+  }
+  
+  .slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  .btn:active {
+    transform: scale(1.1);
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+/* footer */
+
+.footer-complete{
+    background: #ffffff;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 30);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 30px sans-serif;
+    padding-top:
+  }
+  
+.footer-complete .footer-left,
+.footer-complete .footer-center,
+.footer-complete .footer-right{
+    display:inline-block;
+    vertical-align: top;
+    height: 0;
+  }
+  
+/* Footer left */
+  
+.footer-complete .footer-left{
+    width: 30%;
+  }
+  
+/* company logo */
+  
+.footer-complete .logo-footer{
+    width: 250px;
+    height: 90px;
+  }
+  
+  
+/* Footer links */
+  
+.footer-complete .footer-links{
+    color:  black;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+.footer-complete .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:black;
+  }
+  
+.footer-complete {
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  
+/* Footer Center */
+  
+.footer-complete .footer-center{
+    width: 35%;
+  }
+  
+.footer-complete .footer-center i{
+    background-color:  black;
+    color: white;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+.footer-complete .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+.footer-complete .footer-center p{
+    display: inline-block;
+    color: black;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+.footer-complete .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+.footer-complete .footer-center p a{
+    color:  lightseagreen;
+    text-decoration: none;;
+  }
+  
+.footer-complete .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color:white;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-complete .footer-links .link-1:before {
+    content: none;
+  }
+  
+/* Footer Right */
+  
+.footer-complete .footer-right{
+    width: 20%;
+  }
+  
+.footer-complete .footer-company-about{
+    line-height: 20px;
+    color: black;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+.footer-complete .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+.footer-complete .footer-icons{
+    margin-top: 20px;
+  }
+  
+.footer-complete .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:black;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+@media (max-width: 768px) {
+  
+.footer-complete{
+    font: bold 14px sans-serif;
+    }
+.footer-complete .footer-left,
+.footer-complete .footer-center,
+.footer-complete .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    }  
+.footer-complete .footer-center i{
+    margin-left: 0;
+    }
+  }
+
+  /* Contact us */
+.row {
+    display: flex;
+  }
+  
+.column {
+    flex: 50%;
+    padding: 5px;
+  }
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+input[type=submit] {
+    background-color: #DA0505;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    color:black;
+    float: right;
+        
+}
+    
+.form > * {
+    flex: 1;
+    padding: 5px;
+    float: right; 
+}
+    
+.contact_content {
+    padding: 10px 0px;
+}
+.form-error{
+    color: red;
+    display: none;
+}
+    
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    float: right;
+    border: 1px solid black;
+    padding: 70px;
+    margin: 70px auto;
+
+
+}
+.information > * {
+    flex: 1; 
+}
+    
+.contact_container > * {
+    flex: 1; 
+}
+    
+@media (min-width: 700px) {
+.contact_page {
+    flex-direction: row;
+    margin: auto; 
+    gap: 30px; 
+    max-width: 1000px;
+    }
+}
+
