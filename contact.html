@@ -5,46 +5,57 @@
     <meta name="description" content="King Kichten makes food better" />
     <title>King Kitchen| Home</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorgin="anonymous"></script>
   </head>
   <body>
     <header>
-      <nav> 
-          <ul>
-            <img src="icons/KING KICTHEN LOGO.png" alt="King_loge" class="logo"/>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About us</a></li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="navbar"> 
+          <a href="index.html" class="nav-branding"><img src="/icons/KING KICTHEN LOGO.png" alt="Logo King Kichten" class="logo">
+          <ul class="nav-menu">
+              <li class="nav-item"></li>
+              <a href="index.html"class="nav-link">Home</a>
+              <a href="recipes.html"class="nav-link">Recipes</a>
+              <a href="contact.html"class="nav-link">Contact</a>
+              <a href="about.html"class="nav-link">About us</a>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
     <main>
     <div class="contact_container">
       <h1>Contact us</h1>    
     <h3>Have any questions? We'd love to hear from you!</h3> 
+    <form id="form">
         <div class="contact_content">
         <h2 class="send_us_message">Send us a message</h2>
-        <form id="form">
-        <div> 
 
-        <input type="text" id="name" name="name" placeholder="Full name"/>
+        <div class="contact"> 
+        <label for="name"> Name (minimun 5 characters):</label>    
+        <input type="text" id="name" name="name" placeholder=""/>
         <div class="form-error" id="fullNameError">Please enter your Full name</div>
         <div>
-  
-        <input type="text" id="email" name="email" placeholder="Email address"/>
+        
+        <div class="contact"> 
+        <label for="name"> Email (required):</label> 
+        <input type="text" id="email" name="email" placeholder=""/>
         <div class="form-error" id="emailError">Please enter a valid email address</div>
+        </div>
+
+        <div class="contact">
+        <label for="name"> Message (minimun 5 characters):</label> 
+        <input type="text" id="message" name="message" placeholder=""/>
+        <div class="form-error" id="messageError">Please write something:)</div>
+        </div>
     </div>
 
-    </div>
-</div>
-    <div>
-        <input type="text" id="message" name="message" placeholder="Message"/>
-        </label>
-        <div class="form-error" id="messageError">Please write something:)</div>
-    </div>
-        <input type="submit" value="send">
+    <button>Send message</button>
     </form>
+</div>
 <div class="row">
     <div class="column">
           <img src="images/fresh-italian-salad-antipasto-called-caprese-with-buffalo-mozzarella-sliced-tomatoes-basil-with-olive-oil-ingredients-vegetarian-caprese-salad-italian-food-top-view-rustic-style.jpeg" alt="pasta" style="width:100%">
@@ -59,7 +70,7 @@
     <div class="footer-left">
         <img src="icons/KING KICTHEN LOGO.png" alt="King_loge" class="logo-footer"/>
         <p class="footer-links">
-        <a href="">Home</a>
+        <a href="index.html">Home</a>
         <a href="recipes.html">Recipes</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -77,7 +88,7 @@
         </div>
         <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="mailto:contact@Elon`skitchen.com">contact@Elon`skitchen.com</a></p>
+        <p><a href="mailto:contact@kingkitchen.com">contact@kingkitchen.com</a></p>
         </div>
     </div>
 
@@ -96,5 +107,6 @@
     </div>
     </footer>
     <script src="js/contact.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html> 

@@ -1,49 +1,48 @@
-"use strict";
-// Select all slides
-const slides = document.querySelectorAll(".slide");
+const url = "https://kingkitchen.pilusjin.site/wp-json/wp/v2/posts?per_page=100";
+const carouselContainer = document.querySelector(".slideshow-container");
 
-// loop through slides and set each slides translateX
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
+    async function latestPosts(){
+  try{
+      const response = await fetch(url);
+      const latestPosts = await response.json();
+      console.log(latestPosts);
 
-// select next slide button
-const nextSlide = document.querySelector(".btn-next");
+      for (let i = 0; i < 5; i++) {
+          function createHTML(posts) {
+              carouselContainer.innerHTML += `<div class="mySlides fade">
+              <img src="${latestPosts[i].better_featured_image.source_url}" alt="" style="width:100%" class="car-image">
+              </div> 
+              <a class="prev">&#10094;</a>
+              <a class="next">&#10095;</a>`
+            }
 
-// current slide counter
-let curSlide = 0;
-// maximum number of slides
-let maxSlide = slides.length - 1;
+/* Bruke addEventListener til knappene*/ 
+/* document.querySelector('.prev').addEventListener("click", function(event) {}) ????? */
 
-// add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
+createHTML(latestPosts);
+
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex-1].style.display = "block";
+
+    }
+    }
+
+  } catch(error){
+  console.log(error);
+  carouselContainer.innerHTML = `<div class="error">Ups! An error has occured</div>`;
   }
+}
 
-  //   move slide by -100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
-
-// select next slide button
-const prevSlide = document.querySelector(".btn-prev");
-
-// add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
-  }
-
-  //   move slide by 100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
-});
+latestPosts();
