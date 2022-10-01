@@ -10,6 +10,7 @@ const url = "https://kingkitchen.pilusjin.site/wp-json/wp/v2/posts/" + id;
 
 console.log(url);
 
+
 async function details() {
 
     try {
@@ -18,6 +19,8 @@ async function details() {
 
         console.log(res);
 
+        loading.style.display ="none";
+        
         newPageTitle = res.title.rendered;
         document.title = newPageTitle;
 
@@ -54,3 +57,4 @@ function onClick(element) {
 document.getElementById("img01").src = element.src;
 document.getElementById("modal01").style.display = "block";
 }
+const loading = document.querySelector(".loading")

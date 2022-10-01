@@ -18,22 +18,22 @@ form.onsubmit = function (event) {
         fullNameError.style.display = "block";
     }
 
-    if (validateEmail(email.value) === true) {
-        emailError.style.display = "none";
+    if (checkLength(message.value, 25) === true) {
+        messageError.style.display = "none";
     } else {
-        emailError.style.display = "block";
+        messageError.style.display = "block";
     }
 
-    if (checkLength(subject.value, 0) === true) {
+    if (checkLength(subject.value, 15) === true) {
         subjectError.style.display = "none";
     } else {
         subjectError.style.display = "block";
     }
 
-    if (checkLength(message.value, 0) === true) {
-        messageError.style.display = "none";
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
     } else {
-        messageError.style.display = "block";
+        emailError.style.display = "block";
     }
 
 }

@@ -48,6 +48,10 @@ body {
     transition: 0,7s ease;
     padding: 20px;
 }
+nav a:hover {
+    cursor: pointer;
+    background-color:#ffe5e5;
+}
 
 .hamburger {
     display: none;
@@ -70,6 +74,7 @@ body {
     align-items: center;
     padding-top: 10px;
 }
+
 
 @media(max-width:950px) {
     
@@ -108,6 +113,11 @@ body {
     .nav-menu.active{
         left: 0;
     }
+    .nav-branding{
+        justify-content: center;
+        margin: auto;
 
+    }
+    
 }
 

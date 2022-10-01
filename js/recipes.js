@@ -13,8 +13,9 @@ async function getRecipes(){
         const maxpages = response.headers.get("x-wp-totalpages");
         if (Number(maxpages) === currentPage) {
         loadmore.style.display = "none"; 
-        }
-
+       
+    }
+ loading.style.display ="none";
 
         for (let i = 0; i < getRecipes.length; i++) {
             function createHTML(getRecipes){
@@ -37,3 +38,4 @@ recipesContainer.innerHTML = `<div class="error">Ups! An error has occured</div>
 getRecipes();
 
 loadmore.addEventListener("click", getRecipes);
+const loading = document.querySelector(".loading")
