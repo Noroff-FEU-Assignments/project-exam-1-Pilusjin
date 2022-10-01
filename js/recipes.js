@@ -18,11 +18,11 @@ async function getRecipes(){
 
         for (let i = 0; i < getRecipes.length; i++) {
             function createHTML(getRecipes){
-            recipesContainer.innerHTML += `<a href="blogspecific.html?id=${getRecipes[i].id}"><div class="recipes-box"> 
+            recipesContainer.innerHTML += `<div class="recipes-box"> 
                 <img src="${getRecipes[i].better_featured_image.source_url}" class="image">
                 <h2>${getRecipes[i].title.rendered}</h2>
-        </div></a>
-        `;
+                <a href="blogspecific.html?id=${getRecipes[i].id}"><button>Read more</button></a>
+                </div>`;
 }
 createHTML(getRecipes);
 

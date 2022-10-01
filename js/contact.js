@@ -4,6 +4,8 @@ const fullname = document.querySelector("#name");
 const fullNameError = document.querySelector("#fullNameError");
 const address = document.querySelector("#message");
 const addressError = document.querySelector("#messageError");
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 
@@ -20,6 +22,12 @@ form.onsubmit = function (event) {
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
+    }
+
+    if (checkLength(subject.value, 0) === true) {
+        subjectError.style.display = "none";
+    } else {
+        subjectError.style.display = "block";
     }
 
     if (checkLength(message.value, 0) === true) {
