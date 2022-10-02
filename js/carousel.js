@@ -39,7 +39,7 @@ function plussBlogs (n) {
 
 let slideIndex = 1;
 
-    function showLatestblogs(n) {
+function showLatestblogs(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");
 
@@ -50,6 +50,6 @@ let slideIndex = 1;
       }
 
       slides[slideIndex-1].style.display = "block";
+}
 
-  }
-  const loading = document.querySelector(".loading")
+const loading = document.querySelector(".loading")

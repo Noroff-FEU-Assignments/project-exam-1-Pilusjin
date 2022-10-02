@@ -25,7 +25,7 @@ a{
 }
 
 body {
-    background-color: #d4dfd8;
+    background-color: #f1ebea;
 }
 
 .navbar {
@@ -49,9 +49,9 @@ body {
     transition: 0,7s ease;
     padding: 20px;
 }
-nav a:hover, .onpage {
+.nav-link:hover, .onpage {
     cursor: pointer;
-    background-color:#ffe5e5;
+    background-color:#eaf1ec;
 }
 
 .hamburger {
