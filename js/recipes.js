@@ -28,7 +28,10 @@ async function getBlogs(){
 createHTML(getBlogs);
 
 
-}
+    }
+
+    loading.style.display = "none"; 
+
 } catch(error){
 console.log(error);
 recipesContainer.innerHTML = `<div class="error">Ups! An error has occured</div>`;
