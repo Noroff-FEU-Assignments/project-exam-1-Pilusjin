@@ -11,27 +11,27 @@ const url = "https://kingkitchen.pilusjin.site/wp-json/wp/v2/posts/" + id;
 console.log(url);
 
 
-async function details() {
+async function specific() {
 
     try {
         const response = await fetch(url); 
-        const res = await response.json();
+        const spe = await response.json();
 
-        console.log(res);
+        console.log(spe);
 
         loading.style.display ="none";
-        
-        newPageTitle = res.title.rendered;
+
+        newPageTitle = spe.title.rendered;
         document.title = newPageTitle;
 
-        console.log(res.id);
+        console.log(spe.id);
 
         blogContainer.innerHTML += "";
 
         blogContainer.innerHTML += `<div class="section"> 
-            <h1>${res.title.rendered}</h1>
+            <h1>${spe.title.rendered}</h1>
             <div class="container1">
-            <img src="${res.better_featured_image.source_url}" style="max-width:100%;cursor:pointer"
+            <img src="${spe.better_featured_image.source_url}" style="max-width:100%;cursor:pointer"
             onclick="onClick(this)" class="modal-hover-opacity larger-image"></div>
             <div id="modal01" class="modal" onclick="this.style.display='none'">
             <span class="close">&times;&nbsp;&nbsp;&nbsp;</span>
@@ -39,7 +39,7 @@ async function details() {
                     <img id="img01" style="max-width:100%">
                 </div>
             </div>
-            <p>${res.content.rendered}</p>
+            <p>${spe.content.rendered}</p>
                 </div>`;
 
     } catch(error) {
@@ -48,7 +48,7 @@ async function details() {
 }
 
 }
-details();
+specific();
 
 
 /* Image modal */ 

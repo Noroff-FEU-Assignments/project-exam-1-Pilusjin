@@ -1,12 +1,13 @@
 
 *{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'bodonu 72 oldstyle'Arial, Helvetica, sans-serif;
     margin: 0;
     color: #000000;
 }
 
 .logo{
-    width: 350px;
+    width: 185px;
+    padding-left: 50px;
 }
 
 li {
@@ -24,7 +25,7 @@ a{
 }
 
 body {
-    background-color: #dee5ea;
+    background-color: #d4dfd8;
 }
 
 .navbar {
@@ -75,7 +76,6 @@ nav a:hover {
     padding-top: 10px;
 }
 
-
 @media(max-width:950px) {
     
     .hamburger{
@@ -116,7 +116,9 @@ nav a:hover {
     .nav-branding{
         justify-content: center;
         margin: auto;
-
+    }
+    .logo {
+        padding: 0;
     }
     
 }

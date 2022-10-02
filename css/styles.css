@@ -58,7 +58,7 @@
     margin: auto;
     margin: 40px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
 }
     
 .mySlides {
@@ -70,23 +70,22 @@
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
     padding: 16px;
-    color: black;
+    color: rgb(11, 38, 21);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 10px 0px;
     user-select: none;
 }
     
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 10px 0px;
 }
     
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(159, 106, 106, 0.8);
     color: #fff;
 }
     
@@ -113,7 +112,7 @@
     width:100%;
     height:100%;
     overflow:auto;
-    background-color:rgba(0, 0, 0, 0.685);
+    background-color:#ffe5e5(0, 0, 0, 0.685);
     background-color:rgba(255, 255, 255, 0.8)
 }
 
@@ -174,9 +173,11 @@ textarea {
 
 h1 {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     text-transform: uppercase;
-    font-size: 35px;
+    font-size: 35px; 
+    max-width: 800px;
+    margin: auto;
 }
 
 h2{
@@ -226,7 +227,8 @@ h3 {
     align-items: center;
     margin: auto;
     gap: 10px;
-    
+    background-color: #fff;
+    padding: 10px;
     
 
 }
@@ -252,9 +254,9 @@ button:hover {
     margin: 40px auto;
 }
 .loading {
-    width: 48px;
-    height: 48px;
-    border: 5px solid red;
+    width: 40px;
+    height: 40px;
+    border: 4px solid red;
     border-bottom-color: #Ffe5e5;
     border-radius: 50%;
     display: inline-block;
@@ -273,11 +275,11 @@ button:hover {
 
 /* Recipes */
 
-.recipes {
+.blogs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
     place-items: center;
+    max-width: 1000px;
     margin: auto;
     padding: 5px;
 }
@@ -286,7 +288,7 @@ button:hover {
     max-height: 270px;
 }
 
-.recipes-box {
+.blogs-box {
     align-items: center;
     padding: 20px;
     margin: 10px auto;
@@ -296,7 +298,7 @@ button:hover {
 }
 
 @media(max-width:980px) {
-    .recipes {
+    .blogs {
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -333,8 +335,6 @@ footer {
     align-items: center; 
     padding: 10px;
     gap: 200px;
-    font-size: 18px;
-    text-align: center;
 }
 .footer.div {
     text-align: center;

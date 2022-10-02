@@ -2,7 +2,7 @@ const url = "https://kingkitchen.pilusjin.site/wp-json/wp/v2/posts?per_page=100"
 const carouselContainer = document.querySelector(".slideshow-container");
 
     async function latestPosts(){
-  try{
+      try{
       const response = await fetch(url);
       const latestPosts = await response.json();
       console.log(latestPosts);
